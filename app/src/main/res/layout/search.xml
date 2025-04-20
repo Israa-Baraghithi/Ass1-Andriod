@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/perfumelogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ListView
+        android:id="@+id/listViewResults"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/logoImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtChooseBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose a Brand"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/listViewResults"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/spinnerType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:entries="@array/perfume_types"
+        app:layout_constraintTop_toBottomOf="@id/txtChooseBrand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtPerfumeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the name of perfume"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/spinnerType"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtPerfumeName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price less than:"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/edtName"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/edtPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Example: 500"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/txtPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtPriceType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type of price:"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/edtPrice"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/txtPriceType"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOW" />
+
+        <RadioButton
+            android:id="@+id/radioHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HIGH" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtComponents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perfume components:"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/checkVanilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vanilla"
+        app:layout_constraintTop_toBottomOf="@id/txtComponents"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/checkRose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rose"
+        app:layout_constraintTop_toBottomOf="@id/checkVanilla"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/checkMusk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Musk"
+        app:layout_constraintTop_toBottomOf="@id/checkRose"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/checklavender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lavender"
+        app:layout_constraintTop_toBottomOf="@id/checkMusk"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checklavender" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

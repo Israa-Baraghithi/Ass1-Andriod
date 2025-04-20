@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDF8F7"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingTop="40dp"
+    android:paddingHorizontal="30dp">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="276dp"
+        android:layout_height="265dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="Logo"
+        android:src="@drawable/perfumelogo" />
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/tinos_bold"
+        android:text="Welcome to ValvetAura Perfumes\n✨Embrace Your Essence✨"
+        android:textColor="#4E342E"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:radius="25dp"
+        />
+
+    <Button
+        android:id="@+id/btnBrowse"
+        style="@style/RoundedTextStyle"
+        android:text="⚱ Browse perfumes"
+        android:radius="25dp"
+        />
+
+    <Button
+        android:id="@+id/btnCart"
+        style="@style/RoundedTextStyle"
+        android:text="𖠩 Cart"
+        android:radius="25dp"
+         />
+
+
+    <Button
+        android:id="@+id/btnSearch"
+        style="@style/RoundedTextStyle"
+        android:text="⌕ Find out a Perfume"
+        android:radius="25dp"
+         />
+
+    <Button
+        android:id="@+id/btnAbout"
+        style="@style/RoundedTextStyle"
+        android:text="𐀪 About store"
+        android:radius="25dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="© 2025 VelvetAura. All rights reserved."
+        android:textColor="#999999"
+        android:textSize="12sp" />
+
+</LinearLayout>

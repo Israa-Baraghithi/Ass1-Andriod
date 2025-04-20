@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Perfume-Store</string>
+    <string-array name="perfume_types">
+        <item>All</item>
+        <item>Dior</item>
+        <item>Amber</item>
+        <item>Sandalwood</item>
+    </string-array>
+
+
+</resources>
